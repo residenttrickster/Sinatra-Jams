@@ -1,0 +1,19 @@
+<h1>LET'S EDIT <%=  @artist.name %></h1>
+
+
+<form method="POST" action="/artists/<%=  @artist.id %>">
+<input type="hidden" name="_method" value="PUT">
+    <label for="artist[name]">Name</label>
+    <input type="string" name="artist[name]" value="<%=  @artist.name %>">
+    <br>
+    <br>
+    <label for="artist[age]">Age</label>
+    <input type="number" name="artist[age]" value="<%=  @artist.age %>">
+    <br>
+    <br>
+    <label for="artist[bio]">Bio</label>
+    <input type="string" name="artist[bio]" value="<%=  @artist.bio %>">
+    <br>
+    <br>
+    <input type="submit" value="Edit user">
+</form>

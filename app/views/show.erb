@@ -1,0 +1,16 @@
+<%# * A dynamically generated show page for a single artist that shows their `name`, 
+`age` and `bio`. %>
+
+<h1>This is <%= @artist.name %>'s profile!</h1>
+
+<h3>AGE: <%= @artist.age %></h3>
+<h3>BIO: <%= @artist.bio %></h3>
+<br>
+<br>
+<a href="/artists/<%= @artist.id %>/edit">Click here to edit!</a>
+<br>
+<br>
+<form method="POST" action="/artists/<%= @artist.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete artist">
+</form>

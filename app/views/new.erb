@@ -1,0 +1,22 @@
+<%# * A form to log a new artist with their 
+`name`, `age` and `bio`. 
+After the form is submitted, the user should be redirected 
+to the saved artist's show page. %>
+
+<h1>CREATE A NEW ARTIST!</h1>
+
+<form method="POST" action="/artists">
+    <label for="artist[name]">Name</label>
+    <input type="string" name="artist[name]">
+    <br>
+    <br>
+    <label for="artist[age]">Age</label>
+    <input type="number" name="artist[age]">
+    <br>
+    <br>
+    <label for="artist[bio]">Bio</label>
+    <input type="string" name="artist[bio]">
+    <br>
+    <br>
+    <input type="submit" value="Create artist">
+</form>
